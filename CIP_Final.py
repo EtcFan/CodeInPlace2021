@@ -56,10 +56,10 @@ def end(file):
             end_in = input("Enter a different end date: ")
 
 def ask_benchmarks():
-    volatility_max = int( input('Whats your max Volatility: '))
-    volatility_min = int( input('Whats your min Volatitly: '))
+    var_max = int( input('Whats your max variance: '))
+    var_min = int( input('Whats your min variance: '))
     growth_min = int(input('What minimum growth in % do you want? '))
-    benchmarks = [volatility_max, volatility_min, growth_min]
+    benchmarks = [var_max, var_min, growth_min]
     return benchmarks
 
 def look_up(file, start_date, end_date): 
@@ -82,13 +82,13 @@ def calc_var(data, benchmarks):
             el += (elem - avg)**2
     var = math.sqrt(1/n * el) #varianz
     var = round(var, 3) * 100 #to %
-    print ('The volatility was: ',str(var), "%")
+    print ('The variance was: ',str(var), "%")
     if benchmarks[0] <= var: 
-        print ("It's higher than your maximum volatility.")
+        print ("It's higher than your maximum variance.")
     elif benchmarks[1] >= var: 
-        print ("It's lower than your minimum volatitily.")
+        print ("It's lower than your minimum variance.")
     else: 
-        print("It's inside your volatility preferences.")
+        print("It's inside your variance preferences.")
 
 def calc_gro(data, b):
     summe = data["Profit"].sum()
