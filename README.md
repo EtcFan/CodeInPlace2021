@@ -1,7 +1,7 @@
 # CodeInPlace2021
 A Repository for my final project for Code In Place 2021. 
 
-All historical financial data was downloaded Yahoo Finance. 
+All historical financial data was downloaded from Yahoo Finance. 
 
 What does this program do? 
 
