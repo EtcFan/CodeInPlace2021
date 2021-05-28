@@ -4,9 +4,11 @@ A Repository for my final project for Code In Place 2021.
 All historical financial data was downloaded Yahoo Finance. 
 
 What does this program do? 
+
   It gives you the option to choose a set of financial data (e.g. GOOG for Alphabet stocks), a timeframe and set several benchmarks,
   such as minimum/maximum volatility and growth rate. 
-  Then gets the data for the given timeframe and calculates volatilty, growth rate and the average volume for the given timeframe. 
+  
+  Then it gets the data for the given timeframe and calculates volatilty, growth rate and the average volume for the given timeframe. 
   It compares the data to the given benchmarkes and tells the user if the stock met their expectations. 
   
  How to use this program:
