@@ -56,8 +56,8 @@ def end(file):
             end_in = input("Enter a different end date: ")
 
 def ask_benchmarks():
-    var_max = int( input('Whats your max variance: '))
-    var_min = int( input('Whats your min variance: '))
+    var_max = int( input('Whats your max standard diviation: '))
+    var_min = int( input('Whats your min standard diviation: '))
     growth_min = int(input('What minimum growth in % do you want? '))
     benchmarks = [var_max, var_min, growth_min]
     return benchmarks
@@ -82,13 +82,13 @@ def calc_var(data, benchmarks):
             el += (elem - avg)**2
     var = math.sqrt(1/n * el) #varianz
     var = round(var, 3) * 100 #to %
-    print ('The variance was: ',str(var), "%")
+    print ('The standard deviation was: ',str(var))
     if benchmarks[0] <= var: 
-        print ("It's higher than your maximum variance.")
+        print ("It's higher than your maximum standard deviation.")
     elif benchmarks[1] >= var: 
-        print ("It's lower than your minimum variance.")
+        print ("It's lower than your minimum standard deviation.")
     else: 
-        print("It's inside your variance preferences.")
+        print("It's inside your deviation preferences.")
 
 def calc_gro(data, b):
     summe = data["Profit"].sum()
